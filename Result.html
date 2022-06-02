@@ -1,0 +1,57 @@
+<IDOCTYPE HTML>
+	<head>
+		<title>Result</title>
+
+	</head>
+
+	<body> 
+		<script type="text/javascript">
+			function Calculate() {
+				
+			var total, grade;
+			var Com415Ca=parseInt(document.myform.txtCaCom415.value);
+			var Com415Exam=parseInt(document.myform.txtExamCom415.value);
+
+			total=Com415Ca+Com415Exam;
+			document.myform.txtTotalCom415.value=total;
+
+			if (total>=70) {
+
+				grade="A"
+
+				document.myform.txtGradeCom415.value=grade;
+			}
+
+}
+		</script>
+
+		<form name="myform">
+			<table border="1px">
+			<th> S/N </th>
+			<th> Course Code </th>
+			<th> Course Title </th>
+			<th> CA </th>
+			<th> Exam </th>
+			<th> Total </th>
+			<th> Grade </th>
+
+			<tr>
+				<td> 1 </td>
+				<td> COM 415 </td>
+				<td> Data Communication and Networking </td>
+				<td> <input type="number" name="txtCaCom415" placeholder="Enter CA Score"> </td>
+				<td> <input type="number" name="txtExamCom415" placeholder="Enter Exam Score"> </td>
+				<td> <input type="number" name="txtTotalCom415" placeholder="Total Score" disabled> </td>
+				<td> <input type="text" name="txtGradeCom415" placeholder="Grade"  disabled> </td>
+			</tr>
+		</table>
+		</form>
+
+		<button name="btnCal" onclick="Calculate();"> Calculate </button>
+		<button name="btnClear"> Clear </button>
+		<button name="btnPrint" onclick="print('print')"> Print </button>
+
+	</body>
+
+
+</html>
